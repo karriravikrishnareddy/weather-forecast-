@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCast | Live Weather Updates</title>
+    <meta
+      name="description"
+      content="A responsive weather dashboard with live updates and 7-day forecast."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">☀️</span>
+          <span>Weather Forecast</span>
+        </div>
+
+        <div class="search-panel">
+          <input
+            id="cityInput"
+            type="text"
+            placeholder="Search city..."
+            aria-label="Search city"
+          />
+          <button id="searchBtn" class="primary-btn">Search</button>
+        </div>
+      </header>
+
+      <main class="weather-app">
+        <section class="hero-card">
+          <div class="hero-left">
+            <p class="eyebrow">Live Weather</p>
+            <h1 id="cityName">Loading...</h1>
+            <p id="currentDateTime" class="timestamp">--</p>
+            <div class="temperature-row">
+              <div id="weatherIcon" class="weather-icon" aria-label="Weather icon">☀️</div>
+              <div>
+                <div id="temperature" class="temperature">--°C</div>
+                <div id="weatherCondition" class="condition">--</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="stat-grid">
+              <div class="stat-box">
+                <span class="label">Feels like</span>
+                <strong id="feelsLike">--°C</strong>
+              </div>
+              <div class="stat-box">
+                <span class="label">Humidity</span>
+                <strong id="humidity">--%</strong>
+              </div>
+              <div class="stat-box">
+                <span class="label">Wind</span>
+                <strong id="windSpeed">-- km/h</strong>
+              </div>
+              <div class="stat-box">
+                <span class="label">High / Low</span>
+                <strong id="highLow">-- / --</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="forecast-section">
+          <div class="section-heading">
+            <h2>7-Day Forecast</h2>
+          </div>
+          <div id="forecastGrid" class="forecast-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
